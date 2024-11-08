@@ -1,0 +1,238 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Styling */
+html, body {
+    height: 100%; /* Ensure full height for both html and body */
+    display: flex;
+    flex-direction: column; /* Stack the elements vertically */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    flex-grow: 1; /* Allow body to expand and take up available space */
+}
+
+/* Header Styling */
+/* Header Styles */
+header {
+    width: 100%;
+    background-color: #537acf;
+    color: black;
+    text-align: left;
+    padding: 10px 0; /* Added top and bottom padding only */
+    position: relative;
+    box-sizing: border-box; /* Ensures padding does not affect width */
+}
+
+header h2 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+nav {
+    margin-top: 10px;
+    text-align: right;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 15px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    text-align: right;
+}
+
+nav a:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+
+/* Hero Image Section */
+.hero-image {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.overlay-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.overlay-text p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.overlay-text .button {
+    padding: 0.8rem 1.5rem;
+    background-color: #FFF8DE;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.overlay-text .button:hover {
+    background-color: #ffc966;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #6b7b93;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    margin-top: auto; /* Push the footer to the bottom of the page */
+}
+
+footer .footer-content {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer .footer-content .nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+footer .footer-content .nav-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer .footer-content .nav-links a:hover {
+    color: #A66E38;
+}
+
+footer .footer-content .language-select {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+footer .footer-content .language-select label {
+    color: #fff;
+    font-size: 16px;
+}
+
+footer .footer-content .language-select select {
+    padding: 8px;
+    font-size: 14px;
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Mobile-Friendly Media Queries */
+
+/* For screens smaller than 768px (tablets and below) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+    }
+
+    header nav {
+        margin-top: 1rem;
+        justify-content: center;
+    }
+
+    header nav a {
+        margin-left: 0.5rem;
+        font-size: 1rem;
+    }
+
+    /* Hero Image */
+    .hero-image {
+        height: 45vh;
+    }
+
+    .overlay-text h2 {
+        font-size: 2rem;
+    }
+
+    .overlay-text p {
+        font-size: 1rem;
+    }
+
+    .overlay-text .button {
+        padding: 0.6rem 1.2rem;
+        font-size: 1rem;
+    }
+
+    footer .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* For screens smaller than 480px (phones) */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.4rem; /* Smaller header size */
+    }
+
+    header nav a {
+        font-size: 0.9rem;
+        margin-left: 0.5rem;
+    }
+
+    .overlay-text h2 {
+        font-size: 1.8rem;
+    }
+
+    .overlay-text p {
+        font-size: 0.9rem;
+    }
+
+    .overlay-text .button {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .hero-image {
+        height: 40vh; /* Further reduce height for smaller screens */
+    }
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h2>Welcome to SkillCraft</h2>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="Course.html">Courses</a>
+            <a href="demo.html">Demo</a>
+        </nav>
+    </header>
+
+    <!-- Login Form Section -->
+    <div class="wrapper">
+        <div class="form-container">
+            <div class="slide-controls">
+                <input type="radio" name="slide" id="login" checked>
+                <input type="radio" name="slide" id="signup">
+                <label for="login" class="slide login" onclick="toggleForm('login')">Login</label>
+                <label for="signup" class="slide signup" onclick="toggleForm('signup')">Signup</label>
+                <div class="slider-tab"></div>
+            </div>
+            <div class="form-inner">
+                <!-- Login Form -->
+                <form id="loginForm" class="login">
+                    <div class="field">
+                        <input type="text" placeholder="Email Address" required>
+                    </div>
+                    <div class="field">
+                        <input type="password" placeholder="Password" required>
+                    </div>
+                    <div class="pass-link"><a href="#">Forgot password?</a></div>
+                    <div class="field btn">
+                        <input type="submit" value="Login">
+                    </div>
+                    <div class="signup-link">Not a member? <a href="#">Signup now</a></div>
+                </form>
+
+                <!-- Signup Form -->
+                <form id="signupForm" class="signup" style="display: none;">
+                    <div class="field">
+                        <input type="text" placeholder="Email Address" required>
+                    </div>
+                    <div class="field">
+                        <input type="password" placeholder="Password" required>
+                    </div>
+                    <div class="field">
+                        <input type="password" placeholder="Confirm password" required>
+                    </div>
+                    <div class="field btn">
+                        <input type="submit" value="Signup">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="nav-links">
+                <a href="Course.html">Home</a>
+                <a href="About.html">About</a>
+                <a href="Contact.html">Contact</a>
+            </div>
+            <div class="language-select">
+                <label for="language">Select Language:</label>
+                <select id="language" name="language">
+                    <option value="en">English</option>
+                </select>
+            </div>
+            <p>&copy; 2024 SkillCraft. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/login.js"></script>
+</body>
+</html>
